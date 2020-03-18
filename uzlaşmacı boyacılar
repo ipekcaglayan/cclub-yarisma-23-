@@ -1,0 +1,26 @@
+num=int(raw_input())
+final=[]
+for i in range(num):
+    a=raw_input()
+    N=int(a.split()[0])
+    M=int(a.split()[1])
+    q=N/2
+    w=M/2
+    dv=q*w
+    if dv%2==0:
+        ozisayi=dv/2
+    else:
+        ozisayi=(dv/2)+1
+    ozi=ozisayi*4
+    mecem=N*M-ozi
+    if ozi>mecem:
+        final.append("ozi")
+    elif mecem>ozi:
+        final.append("mecem")
+    elif ozi==mecem:
+        final.append("yes")
+def func(final):
+    for i in final:
+        print(i)
+    return 0
+func(final)
